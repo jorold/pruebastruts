@@ -5,15 +5,17 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" 
-        rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" 
-        crossorigin="anonymous">
-        <title>STRUTS Page</title>
+        <jsp:include page="includes/webhead.jsp"/>
+        <title>JSP-STRUTS Page</title>
     </head>
     <body>
-        <h1>DEPARTAMENTOS</h1>
-        <html:link href="webeliminardepartamento.jsp">Eliminar Departamento</html:link>
+        <jsp:include page="includes/webmenu.jsp"/>
+        <section>
+            <main role="main" class="container">
+
+                <div class="starter-template">
+                 <h1>DEPARTAMENTOS</h1>
+                 <html:link styleClass="btn-outline-info" href="webeliminardepartamento.jsp">Eliminar Departamento</html:link>
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -32,5 +34,16 @@
                 </logic:iterate>
             </tbody>
         </table>
+                </div>
+
+            </main><!-- /.container -->            
+        </section>
+        <jsp:include page="includes/webfooter.jsp"/>
     </body>
 </html>
+
+
+
+
+
+
