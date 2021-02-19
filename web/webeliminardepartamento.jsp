@@ -19,8 +19,6 @@
                         <html:text property="deptno"/>
                         <button type="submit" class="btn btn-outline-danger">Eliminar Departamento</button>
                     </html:form>
-
-
                 </div>
 
             </main><!-- /.container -->            
