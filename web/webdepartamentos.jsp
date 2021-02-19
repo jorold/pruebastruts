@@ -15,7 +15,7 @@
 
                 <div class="starter-template">
                     <h1>DEPARTAMENTOS</h1>
-                    <html:link styleClass="btn-outline-info" href="webeliminardepartamento.jsp">Eliminar Departamento</html:link>
+                    <!--<html:link styleClass="btn-outline-info" href="webeliminardepartamento.jsp">Eliminar Departamento</html:link>-->
                         <table class="table table-bordered">
                             <thead>
                                 <tr>

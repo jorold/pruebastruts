@@ -27,6 +27,12 @@
                             </html:link>
                             <!--</a>-->
                         </li>
+                        <li class="nav-item active">
+                            <html:link href="webinsertardepartamento.jsp" styleClass="nav-link">                            
+                                Insertar Departamento
+                                <span class="sr-only">(current)</span>
+                            </html:link>                            
+                        </li>
                     </ul>
                     <form class="form-inline my-2 my-lg-0">
                         <input class="form-control mr-sm-2" type="text" placeholder="Buscar" aria-label="Search">

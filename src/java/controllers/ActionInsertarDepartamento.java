@@ -1,5 +1,6 @@
 package controllers;
 
+import forms.FormInsertarDepartamento;
 import java.util.ArrayList;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -10,11 +11,11 @@ import org.apache.struts.action.ActionMapping;
 import org.apache.struts.action.DynaActionForm;
 import repositories.RepositoryDepartamentos;
 
-public class ActionEliminarDepartamento extends org.apache.struts.action.Action {
+public class ActionInsertarDepartamento extends org.apache.struts.action.Action {
 
     RepositoryDepartamentos repo;
 
-    public ActionEliminarDepartamento() {
+    public ActionInsertarDepartamento() {
         this.repo = new RepositoryDepartamentos();
     }
 
@@ -23,14 +24,13 @@ public class ActionEliminarDepartamento extends org.apache.struts.action.Action 
             HttpServletRequest request, HttpServletResponse response)
             throws Exception {
         DynaActionForm f = (DynaActionForm) form;
-        String dato = f.get("deptno").toString();
-        int deptno = Integer.parseInt(dato);
-        this.repo.eliminarDepartamento(deptno);
+        String dato = f.get("numero").toString();
+        int num = Integer.parseInt(dato);
+        String nom = f.get("nombre").toString();
+        String loc = f.get("localidad").toString();
+        this.repo.insertarDepartamento(num, nom, loc);
         ArrayList<Departamento> departamentos = this.repo.getDepartamento();
-        //HAY QUE ACTUALIZAR EL PLUGIN PARA TODA LA APP NO SÓLO PARA LA PETICION
-        //QUE ES LO QUE HACE EL REQUEST, SOLO ACTUALIZA LA PETICIÓn
-        //por lo que entre request y set Attribute hay que poner getServletContext()
         request.getServletContext().setAttribute("LISTDEPARTAMENTOS", departamentos);
-        return mapping.findForward("webdepartamentos");
+        return mapping.findForward("webinsertardepartamento");
     }
 }
