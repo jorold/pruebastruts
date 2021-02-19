@@ -14,12 +14,13 @@
             <main role="main" class="container">
 
                 <div class="starter-template">
-                  <h1>ELIMINAR DEPARTAMENTO</h1>
-        <html:form action="/ActionEliminarDepartamento">
-            <label>Eliminar Departamento</label>
-            <html:text property="deptno"/>
-            <button type="submit" class="btn btn-outline-danger">Eliminar Departamento</button>
-        </html:form>
+                    <h1>ELIMINAR DEPARTAMENTO</h1>
+                    <html:form action="/ActionEliminarDepartamento"><label>Eliminar Departamento</label>
+                        <html:text property="deptno"/>
+                        <button type="submit" class="btn btn-outline-danger">Eliminar Departamento</button>
+                    </html:form>
+
+
                 </div>
 
             </main><!-- /.container -->            
